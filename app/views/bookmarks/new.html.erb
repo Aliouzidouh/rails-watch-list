@@ -5,7 +5,7 @@
 <br>
 
 <%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie, collection: Movie.active.order(:title), prompt: "Choose a Movie"%>
+  <%= f.association :movie, prompt: "Select a movie", input_html: {data: { controller: "tom-select"}}%>
   <%= f.input :comment %>
   <%= f.button :submit %>
 <% end %>
